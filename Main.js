@@ -26,7 +26,7 @@ const commandFiles = fs
 for (const file of commandFiles) {
     const command = require(`./Command/${file}`);
     client.commands.set(command.name, command);
-}   
+}
 
 client.once("ready", () => {
     client.user.setPresence({
